@@ -5,6 +5,7 @@ import 'package:house_rent/widgets/about.dart';
 import 'package:house_rent/widgets/content_intro.dart';
 import 'package:house_rent/widgets/details_app_bar.dart';
 import 'package:house_rent/widgets/house_info.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class Details extends StatelessWidget {
   final House house;
@@ -24,7 +25,7 @@ class Details extends StatelessWidget {
             const SizedBox(height: 20),
             ContentIntro(house: house),
             const SizedBox(height: 20),
-            const HouseInfo(),
+            HouseInfo(house: house), // Pasamos el objeto house a HouseInfo
             const SizedBox(height: 20),
             const About(),
             const SizedBox(height: 20),

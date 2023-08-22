@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+
+import '../models/house.dart';
 
 class HouseInfo extends StatelessWidget {
-  const HouseInfo({Key? key}) : super(key: key);
+  final House house;
+
+  HouseInfo({required this.house, Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Padding(
+  Widget build(BuildContext context) {    return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
